@@ -8,6 +8,8 @@ import {
   FaUsers
 } from 'react-icons/fa';
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
 const Register = () => {
 
   const [selectedRole, setSelectedRole] = useState('student');
@@ -166,13 +168,12 @@ const Register = () => {
         userData.mobile = formData.mobile.trim();
       }
 
-      const response = await fetch(
-        'http://your-backend.onrender.com/api/auth/register',
+      const response = await fetch(`${API_URL}/api/auth/register`,
         {
-          method: 'POST',
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
-          },
+            "Content-Type": "application/json",
+         },
           body: JSON.stringify(userData),
         }
       );
