@@ -23,7 +23,7 @@ const TeacherDashboard = () => {
     try {
 
       const response = await fetch(
-        'http://your-backend.onrender.com/api/teacher/students/all'
+        'http://localhost:5000/api/teacher/students/all'
       );
 
       const data = await response.json();
@@ -51,7 +51,7 @@ const TeacherDashboard = () => {
     try {
 
       const response = await fetch(
-        'http://your-backend.onrender.com/api/teacher/marks',
+        'http://localhost:5000/api/teacher/marks',
         {
           method: 'POST',
           headers: {

@@ -26,7 +26,7 @@ const ParentDashboard = () => {
       }
 
       const response = await fetch(
-        `http://your-backend.onrender.com/api/parent/${user.mobile}/student`
+        `http://localhost:5000/api/parent/${user.mobile}/student`
       );
 
       if (!response.ok) {
