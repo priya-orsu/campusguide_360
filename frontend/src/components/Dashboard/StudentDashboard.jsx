@@ -37,7 +37,7 @@ const StudentDashboard = () => {
       try {
 
         const studentRes = await fetch(
-          `http://localhost:5000/api/student/${studentId}`
+          `http://your-backend.onrender.com/api/student/${studentId}`
         );
 
         if (studentRes.ok) {
@@ -57,7 +57,7 @@ const StudentDashboard = () => {
       try {
 
         const marksRes = await fetch(
-          `http://localhost:5000/api/student/${studentId}/marks`
+          `http://your-backend.onrender.com/api/student/${studentId}/marks`
         );
 
         if (marksRes.ok) {
@@ -77,7 +77,7 @@ const StudentDashboard = () => {
       try {
 
         const attendanceRes = await fetch(
-          `http://localhost:5000/api/student/${studentId}/attendance`
+          `http://your-backend.onrender.com/api/student/${studentId}/attendance`
         );
 
         if (attendanceRes.ok) {
@@ -101,7 +101,7 @@ const StudentDashboard = () => {
       try {
 
         const subjectsRes = await fetch(
-          `http://localhost:5000/api/student/${studentId}/subjects`
+          `http://your-backend.onrender.com/api/student/${studentId}/subjects`
         );
 
         if (subjectsRes.ok) {
@@ -125,7 +125,7 @@ const StudentDashboard = () => {
       try {
 
         const timetableRes = await fetch(
-          `http://localhost:5000/api/student/${studentId}/timetable`
+          `http://your-backend.onrender.com/api/student/${studentId}/timetable`
         );
 
         if (timetableRes.ok) {
@@ -398,7 +398,7 @@ const StudentDashboard = () => {
 
               <a
                 key={item.id}
-                href={`http://localhost:5000/uploads/timetables/${item.pdf_file}`}
+                href={`http://your-backend.onrender.com/uploads/timetables/${item.pdf_file}`}
                 target="_blank"
                 rel="noreferrer"
                 className="block bg-blue-700 text-white px-4 py-3 rounded-lg mb-3 hover:bg-blue-800"
