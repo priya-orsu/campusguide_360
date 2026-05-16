@@ -19,15 +19,20 @@ const app = express();
 
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "https://your-netlify-app.netlify.app"
-  ],
-  credentials: true
-}));
-
 app.use(express.json());
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://priya-orsu.github.io",
+      "https://campusguide360.netlify.app"
+    ],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"]
+  })
+);
 
 app.use('/uploads', express.static('uploads'));
 
