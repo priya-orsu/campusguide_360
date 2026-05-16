@@ -20,7 +20,10 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: "https://your-netlify-site.netlify.app",
+  origin: [
+    "http://localhost:5173",
+    "https://your-netlify-app.netlify.app"
+  ],
   credentials: true
 }));
 
